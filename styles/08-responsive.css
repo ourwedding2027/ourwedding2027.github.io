@@ -1,4 +1,30 @@
-﻿@media (max-width: 768px) {
+﻿.countdown-title,
+.wedding-details-timeline h2,
+.celebration-header h2,
+.venue-hero-eyebrow,
+.timeline-header h2,
+.menu-title,
+.travel-kicker,
+.travel-section-heading h2,
+.travel-stay-band h2,
+.quick-facts-content h3,
+.travel-itineraries h2,
+.itinerary-longer-heading h2,
+.faq-header h2,
+.rsvp-header h2,
+main h2 {
+  font-size: clamp(1.8rem, 2.4vw, 2.5rem);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --body-copy-size: clamp(15px, 1vw, 17px);
+  }
+
+  .language-selector-title {
+    font-size: 1rem;
+  }
+
   main {
     margin-bottom: 0;
   }
@@ -8,13 +34,19 @@
   }
 
   .venue-hero-eyebrow,
+  .countdown-title,
   .celebration-header h2,
+  .wedding-details-timeline h2,
+  .timeline-header h2,
   .menu-title,
   .faq-header h2,
   .travel-kicker,
   .travel-section-heading h2,
   .travel-stay-band h2,
-  .travel-itineraries h2 {
+  .quick-facts-content h3,
+  .travel-itineraries h2,
+  .itinerary-longer-heading h2,
+  .rsvp-header h2 {
     font-size: clamp(1.4rem, 6.4vw, 1.95rem);
     letter-spacing: 0.08em;
     line-height: 1.08;
@@ -29,15 +61,28 @@
   .travel-stay-band p,
   .airport-item p,
   .airport-item small,
-  .itinerary-card p,
+  .itinerary-card p:not(.itinerary-card-route),
   .itinerary-day p,
   .travel-stay-copy,
   .faq-intro,
-  .faq-answer p,
   .rsvp-header p,
   .rsvp-card p {
-    font-size: clamp(0.82rem, 3.25vw, 0.92rem);
+    font-size: var(--body-copy-size);
     line-height: 1.55;
+  }
+
+  .airport-disclaimers .itinerary-transport {
+    font-size: 0.9rem;
+  }
+
+  .getting-around-intro {
+    overflow-x: visible;
+    white-space: normal;
+  }
+
+  .faq-intro {
+    overflow-x: visible;
+    white-space: normal;
   }
 
   .wedding-details-subtitle,
@@ -225,7 +270,7 @@
   }
 
   .countdown-title {
-    font-size: clamp(1.55rem, 7.2vw, 2.15rem);
+    font-size: clamp(1.4rem, 6.4vw, 1.95rem);
     letter-spacing: 0.08em;
   }
 
@@ -316,23 +361,40 @@
   }
 
   .travel-intro {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
     min-height: 0;
-    padding-top: 3.25rem;
-    padding-bottom: 3.25rem;
+    padding: 0.5rem 3.75rem 1.5rem;
+  }
+
+  .travel-intro.travel-ideas-intro {
+    padding: 0.5rem 0 1.5rem;
+  }
+
+  .travel-intro-header {
+    padding: 1.5rem 3.75rem 0;
   }
 
   .travel-intro-copy {
+    order: 1;
     width: 100%;
   }
 
+  .travel-section .travel-intro > .travel-map-wrap {
+    margin: 0;
+  }
+
   .travel-map-wrap {
-    min-height: 230px;
+    order: 2;
+    float: none;
+    width: 100%;
+    margin: 0;
+    min-height: 200px;
   }
 
   .travel-map {
-    height: 230px;
+    height: auto;
   }
 
   .travel-map-caption {
@@ -344,6 +406,12 @@
   .travel-itineraries {
     padding-top: 3rem;
     padding-bottom: 3rem;
+    padding-right: 3.75rem;
+    padding-left: 3.75rem;
+  }
+
+  .travel-itineraries {
+    padding: 0.5rem 3.75rem 2rem;
   }
 
   .travel-guide:not([hidden]),
@@ -355,21 +423,53 @@
 
   .airport-grid {
     grid-template-columns: 1fr;
-    gap: 1.75rem;
   }
 
   .airport-item {
-    padding: 0 1rem 1.75rem;
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+    padding: 0.85rem 0;
   }
 
   .airport-item + .airport-item {
-    border-top: 1px solid rgba(180, 138, 78, 0.75);
-    border-left: 0;
-    padding-top: 1.75rem;
+    border-top: 1px solid rgba(180, 138, 78, 0.28);
+  }
+
+  .airport-identity {
+    gap: 0.7rem;
+  }
+
+  .airport-code {
+    font-size: 1.7rem;
+  }
+
+  .airport-item h3 {
+    font-size: 1.35rem;
+  }
+
+  .airport-details p {
+    font-size: var(--body-copy-size);
+    line-height: 1.5;
+  }
+
+  .airport-details small {
+    margin-top: 0.3rem;
+    font-size: var(--body-copy-size);
   }
 
   .itinerary-grid {
     grid-template-columns: 1fr;
+  }
+
+  .travel-quick-facts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quick-facts-media {
+    position: absolute;
+    inset: 0;
+    aspect-ratio: auto;
+    mask-image: none;
   }
 
   .itinerary-featured {
@@ -404,6 +504,7 @@
   }
 
   .travel-stay-content {
+    display: block;
     grid-template-columns: 1fr;
     gap: 0.85rem;
     width: min(650px, 100%);
@@ -502,7 +603,7 @@
   }
 
   .timeline-stop p {
-    font-size: 0.86rem;
+    font-size: var(--body-copy-size);
     line-height: 1.45;
   }
 
@@ -565,14 +666,19 @@
   }
 
   .faq-botanical-top-right-flower {
-    top: clamp(-104px, 6vw, -54px);
-    right: clamp(-104px, 2vw, 21px);
-    width: clamp(280px, 123vw, 509px);
+    top: -57px;
+    right: -22px;
+    width: clamp(309px, 128vw, 532px);
   }
 
   .faq-question {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     letter-spacing: 0.01em;
+  }
+
+  .faq-answer,
+  .faq-answer p {
+    font-size: clamp(0.82rem, 3.25vw, 0.92rem);
   }
 
   .wedding-details { padding: 2.5rem 1rem; }
@@ -610,7 +716,7 @@
   }
 
   .wedding-event div > p:not(.wedding-event-time) {
-    font-size: clamp(0.88rem, 3.5vw, 0.96rem);
+    font-size: var(--body-copy-size);
     line-height: 1.45;
   }
 
@@ -643,6 +749,13 @@
     width: clamp(220px, 54vw, 320px);
     left: clamp(-92px, -18vw, -56px);
     top: clamp(-66px, -12vw, -38px);
+  }
+
+  .travel-section p:not(.travel-kicker):not(.travel-script),
+  .travel-section li,
+  .travel-section small,
+  .travel-stay-band p:not(.travel-stay-alternative-lead) {
+    font-size: clamp(0.82rem, 3.25vw, 0.92rem);
   }
 }
 
@@ -740,4 +853,3 @@
     width: clamp(280px, 60vw, 390px);
   }
 }
-

@@ -31,11 +31,12 @@
 }
 
 .faq-botanical-top-right-flower {
-  top: clamp(-131px, 97vw, -137px);
-  right: clamp(113px, 132vw, 490px);
-  width: clamp(208px, 194vw, 1242px);
+  z-index: 1;
+  top: clamp(-143px, -9vw, -93px);
+  left: clamp(-260px, -16vw, -190px);
+  width: clamp(900px, 82vw, 1500px);
   transform: rotate(0deg);
-  opacity: 1;
+  opacity: 0.9;
 }
 
 .faq-header,
@@ -75,12 +76,14 @@
 
 .faq-intro {
   margin: 0.95rem auto 0;
-  max-width: 520px;
+  max-width: none;
   color: #b48a4e;
   font-family: "Libre Baskerville", serif;
-  font-size: clamp(14px, 1vw, 16px);
+  font-size: var(--body-copy-size);
   font-weight: 400;
   line-height: 1.8;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .faq-grid {
@@ -96,23 +99,6 @@
 .faq-column {
   position: relative;
   min-width: 0;
-  padding-top: 2.3rem;
-}
-
-.faq-category {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  margin: 0;
-  color: #b48a4e;
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(12px, 1vw, 14px);
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  line-height: 1.2;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .faq-panel {
@@ -179,7 +165,7 @@
   font-weight: 500;
   letter-spacing: 0.02em;
   text-transform: none;
-  font-size: clamp(17px, 1.3vw, 20px);
+  font-size: clamp(19px, 1.4vw, 22px);
   line-height: 1.4;
   transition: color 200ms ease;
 }
@@ -209,7 +195,7 @@
   margin: 0;
   color: #3d342f;
   font-family: "Libre Baskerville", serif;
-  font-size: clamp(14px, 1vw, 16px);
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.8;
 }
@@ -231,6 +217,7 @@
 
 .faq-answer p {
   margin: 0;
+  font-size: 1rem;
 }
 
 .faq-contact {
@@ -244,7 +231,14 @@
   color: #b48a4e;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-size: clamp(14px, 1vw, 16px);
+  font-size: var(--body-copy-size);
+}
+
+@media (min-width: 701px) {
+  .faq-answer,
+  .faq-answer p {
+    font-size: 1.05rem;
+  }
 }
 
 @media (max-width: 700px) {

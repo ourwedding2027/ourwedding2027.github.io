@@ -1,5 +1,5 @@
 ﻿import { DEFAULT_LANGUAGE, RSVP_GMAIL, RSVP_FALLBACK_EMAIL, RSVP_SHEET_URL, WEDDING_DATE_ISO } from "./js/config.js";
-import { translations } from "./js/translations.js?v=20260818-1";
+import { translations } from "./js/translations.js?v=20261104-1";
 import { createI18n } from "./js/i18n.js";
 import { initLanguageSwitch, initMobileMenu } from "./js/features/languageSwitch.js";
 import { initRsvpChoices } from "./js/features/rsvpChoices.js";

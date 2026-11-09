@@ -19,6 +19,7 @@
   --font-couple: "The Youngest Serif", "Malibu", "Cormorant Garamond", Georgia, serif;
 
   --page-width: 1280px;
+  --body-copy-size: clamp(17px, 1.1vw, 19px);
   --section-space: clamp(5rem, 9vw, 9rem);
 
   --page-bg: var(--ivory);
@@ -79,6 +80,7 @@ body {
   background: var(--page-bg);
   color: var(--ink);
   font-family: var(--font-body);
+  font-size: var(--body-copy-size);
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;

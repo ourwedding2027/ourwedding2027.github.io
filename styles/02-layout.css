@@ -135,9 +135,10 @@ main {
   box-shadow: none;
 }
 
+/* Floral art is 2:3 and its flowers end at ~62% of its height; -0.25 × width pins that edge to the hero's bottom border. */
 .hero-floral-left {
   left: clamp(-260px, -16vw, -190px);
-  top: clamp(42px, 4vw, 70px);
+  bottom: calc(clamp(900px, 82vw, 1500px) * -0.25);
 }
 
 .hero-floral-right {
@@ -184,7 +185,7 @@ main {
 
 .hero-copy {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1rem;
+  font-size: clamp(1.15rem, 1.55vw, 1.4rem);
   line-height: 1.6;
   letter-spacing: 0.16em;
   color: #34312f;
@@ -207,7 +208,7 @@ main {
   margin: 0;
   margin-bottom: 12px;
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1rem;
+  font-size: clamp(1.15rem, 1.1vw, 1.3rem);
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -421,7 +422,7 @@ main {
   margin-top: 0.25rem;
   color: #34312f;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.05rem, 1.3vw, 1.15rem);
+  font-size: clamp(20px, 1.6vw, 23px);
   line-height: 1.5;
   letter-spacing: normal;
 }
@@ -431,7 +432,7 @@ main {
   margin-top: 0.35rem;
   color: var(--burgundy);
   font-family: "Cormorant Garamond", serif;
-  font-size: 0.9rem;
+  font-size: var(--body-copy-size);
   text-decoration: underline;
   text-underline-offset: 0.18em;
 }

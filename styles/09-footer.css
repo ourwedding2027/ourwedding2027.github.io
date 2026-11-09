@@ -119,7 +119,7 @@
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
   color: #fbf8f3;
-  font-size: clamp(15px, 1.35vw, 17px);
+  font-size: var(--body-copy-size);
 }
 
 .footer-copyright {

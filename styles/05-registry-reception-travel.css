@@ -77,7 +77,7 @@
 
 .reception-item p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: var(--body-copy-size);
   opacity: 0.82;
 }
 
@@ -138,21 +138,28 @@
 
 .travel-intro {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
-  gap: clamp(2rem, 7vw, 7rem);
-  align-items: center;
-  width: min(1280px, 100%);
+  display: flow-root;
+  width: 100%;
   min-height: 0;
   margin: 0 auto;
-  padding: clamp(2.5rem, 4vw, 4rem) clamp(1.25rem, 5vw, 4rem) clamp(2rem, 3vw, 3rem);
+  padding: clamp(0.75rem, 1.5vw, 1.25rem) calc(1.4rem + 3vw) clamp(2rem, 3vw, 3rem);
+}
+
+.travel-intro-header {
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(1.75rem, 3vw, 2.5rem) calc(1.4rem + 3vw) 0;
+  text-align: center;
 }
 
 .travel-intro-copy {
-  width: min(500px, 100%);
+  width: 50%;
 }
 
-.travel-kicker,
+.travel-section .travel-intro > .travel-map-wrap {
+  margin-right: clamp(7.5rem, 11vw, 9.5rem);
+}
+
 .travel-section-heading h2,
 .travel-stay-band h2,
 .travel-itineraries h2 {
@@ -166,6 +173,17 @@
   text-transform: uppercase;
 }
 
+.travel-kicker {
+  margin: 0;
+  color: #541c21;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.8rem, 2.4vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 .travel-divider {
   display: flex;
   align-items: center;
@@ -174,6 +192,10 @@
   width: fit-content;
   margin: 1.25rem 0;
   color: #b48a4e;
+}
+
+.travel-intro-header .travel-divider {
+  margin: 0.65rem auto 0;
 }
 
 .travel-divider span {
@@ -197,11 +219,11 @@
 }
 
 .travel-intro-copy > p:not(.travel-kicker):not(.travel-script) {
-  max-width: 480px;
+  max-width: none;
   margin: 0.85rem 0 0;
   color: #3d342f;
   font-family: "Libre Baskerville", serif;
-  font-size: clamp(15px, 1.1vw, 17px);
+  font-size: var(--body-copy-size);
   font-weight: 400;
   line-height: 1.75;
   letter-spacing: 0;
@@ -209,16 +231,19 @@
 
 .travel-intro-copy .travel-lead {
   margin-top: 0;
-  font-size: clamp(15px, 1.1vw, 17px);
+  font-size: var(--body-copy-size);
 }
 
 .travel-map-wrap {
+  float: right;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 260px;
+  width: min(29%, 520px);
+  min-height: 0;
+  margin: clamp(3rem, 4.6vw, 5.2rem) 0 1rem clamp(1.25rem, 3vw, 3rem);
   background: transparent;
 }
 
@@ -231,14 +256,14 @@
   z-index: 1;
   display: block;
   width: 100%;
-  height: 260px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .travel-map-caption {
   position: relative;
   z-index: 1;
-  margin: -0.15rem 0 0.75rem;
+  margin: 0.4rem 0 0.75rem;
   color: #541c21;
   font-family: var(--font-script);
   font-size: clamp(1rem, 1.7vw, 1.35rem);
@@ -266,7 +291,8 @@
 
 .travel-toggle {
   margin-top: 1.7rem;
-  padding: 0.8rem 1.2rem;
+  padding: 1rem 1.5rem;
+  font-size: 0.95rem;
 }
 
 .travel-toggle:hover,
@@ -286,26 +312,35 @@
 }
 
 .travel-guide.is-open {
-  max-height: 5000px;
+  max-height: 10000px;
   opacity: 1;
 }
 
 .travel-guide-back {
   display: block;
   margin: 0 auto clamp(2rem, 4vw, 3.5rem);
-  padding: 0.8rem 1.2rem;
+  padding: 1rem 1.5rem;
+  font-size: 0.95rem;
   background: transparent;
 }
 
 .travel-guide-section,
 .travel-itineraries {
-  width: min(1280px, 100%);
+  width: 100%;
   margin: 0 auto;
-  padding: clamp(2rem, 4vw, 3.5rem) clamp(1.25rem, 5vw, 4rem);
+  padding: clamp(2rem, 4vw, 3.5rem) calc(1.4rem + 3vw);
+}
+
+.travel-guide-section {
+  box-sizing: border-box;
 }
 
 .travel-getting-here {
   padding-top: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.travel-guide-section.travel-getting-here {
+  padding-bottom: 1rem;
 }
 
 .travel-section-heading {
@@ -316,34 +351,185 @@
   margin: 1rem auto 2.5rem;
 }
 
+.travel-getting-around {
+  container: getting-around / inline-size;
+  background: var(--ivory);
+}
+
+.travel-guide-section.travel-getting-around {
+  padding-top: 1rem;
+}
+
+.travel-getting-around .travel-section-heading h2 {
+  color: var(--burgundy-soft);
+  letter-spacing: 0;
+  line-height: 1.15;
+}
+
+.travel-getting-around .travel-divider {
+  margin: 0.75rem auto 1rem;
+  color: var(--brass);
+}
+
+.travel-getting-around .travel-divider span {
+  background: var(--brass);
+}
+
+.getting-around-intro {
+  max-width: none;
+  margin: 0 auto 1.5rem;
+  font-family: var(--font-body);
+  font-size: var(--body-copy-size);
+  line-height: 1.7;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.getting-around-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+}
+
+.getting-around-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid var(--brass);
+  background: transparent;
+  box-shadow: none;
+}
+
+.getting-around-icon {
+  flex: 0 0 auto;
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: none;
+  stroke: var(--brass);
+  stroke-width: 1.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.getting-around-card h3 {
+  margin: 0.75rem 0;
+  color: var(--burgundy-soft);
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.getting-around-card p {
+  align-self: stretch;
+  margin: 0 0 1.25rem;
+  font-family: var(--font-body);
+  font-size: var(--body-copy-size);
+  line-height: 1.7;
+  overflow-wrap: break-word;
+  text-align: left;
+}
+
+.getting-around-card .getting-around-note {
+  font-size: var(--body-copy-size);
+}
+
+.getting-around-links a {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  color: var(--burgundy-soft);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.getting-around-links a:hover,
+.getting-around-links a:focus-visible {
+  text-decoration-thickness: 2px;
+}
+
+.getting-around-card::after {
+  content: "";
+  width: 2rem;
+  height: 1px;
+  margin-top: auto;
+  background: var(--brass);
+}
+
+@container getting-around (min-width: 24rem) {
+  .getting-around-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@container getting-around (min-width: 64rem) {
+  .getting-around-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .travel-getting-around {
+    padding-inline: 1rem;
+  }
+
+  .getting-around-card {
+    padding: 1rem;
+  }
+}
+
 .airport-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
 }
 
 .airport-item {
-  padding: 0 clamp(1.25rem, 3vw, 3rem);
-  text-align: center;
+  display: grid;
+  grid-template-columns: minmax(210px, 0.32fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 3rem);
+  padding: 1rem 0;
 }
 
 .airport-item + .airport-item {
-  border-left: 1px solid rgba(180, 138, 78, 0.75);
+  border-top: 1px solid rgba(180, 138, 78, 0.28);
+}
+
+.airport-identity {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.airport-code-line {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 .airport-code {
   display: block;
-  margin-bottom: 0.75rem;
+  margin: 0;
   color: #b48a4e;
   font-family: var(--font-display);
-  font-size: 1.7rem;
-  letter-spacing: 0.18em;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
 }
 
 .airport-plane {
   display: block;
-  width: 25px;
-  height: 25px;
-  margin: 0 auto 0.7rem;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  margin: 0;
   fill: none;
   stroke: #b48a4e;
   stroke-linecap: round;
@@ -355,26 +541,92 @@
   margin: 0;
   color: #541c21;
   font-family: var(--font-display);
-  font-size: 1.45rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.25;
 }
 
-.airport-item p,
-.airport-item small {
+.airport-details p,
+.airport-details small {
   display: block;
-  margin: 0.75rem auto 0;
-  max-width: 230px;
+  margin: 0;
   color: #3d342f;
   font-family: "Libre Baskerville", serif;
-  font-size: clamp(15px, 1.1vw, 16px);
+  font-size: var(--body-copy-size);
   font-weight: 400;
-  line-height: 1.8;
+  line-height: 1.55;
   letter-spacing: 0;
 }
 
-.airport-item small {
+.airport-details small {
+  margin-top: 0.4rem;
   color: #541c21;
+  font-size: var(--body-copy-size);
   font-style: italic;
+}
+
+.airport-details p + p {
+  margin-top: 0.55rem;
+}
+
+.airport-flight-options {
+  margin: 0.35rem 0 0;
+  padding-left: 1.1rem;
+  color: #3d342f;
+  font-family: "Libre Baskerville", serif;
+  font-size: var(--body-copy-size);
+  line-height: 1.5;
+}
+
+.airport-flight-options li + li {
+  margin-top: 0.2rem;
+}
+
+.airport-route-airline {
+  display: inline;
+  font-size: inherit;
+  font-style: italic;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.airport-flight-options + p {
+  margin-top: 0.55rem;
+}
+
+.airport-disclaimers {
+  display: block;
+  margin-top: 1.75rem;
+}
+
+.airport-disclaimers .itinerary-transport {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.6;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: none;
+}
+
+.airport-disclaimers .airport-disclaimers-title {
+  text-transform: none;
+}
+
+.airport-disclaimers-title strong {
+  font-weight: 700;
+}
+
+.airport-details .airport-best-for {
+  margin-top: 0.75rem;
+  font-size: var(--body-copy-size);
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.airport-best-for strong {
+  color: #541c21;
 }
 
 .travel-stay-band {
@@ -387,19 +639,30 @@
 }
 
 .travel-stay-suitcase {
-  position: relative;
-  align-self: center;
-  width: clamp(120px, 14vw, 175px);
-  max-width: 180px;
-  opacity: 0.78;
-  pointer-events: none;
+    position: relative;
+    align-self: center;
+    width: clamp(120px, 26vw, 355px);
+    max-width: 355px;
+    opacity: 0.78;
+    pointer-events: none;
+    transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+    img.travel-stay-suitcase {
+        float: right;
+        width: 220px !important;
+        max-width: none !important;
+        margin: 0 0 2px -60px;
+        transform: translateX(30px);
+    }
+
 }
 
 .travel-stay-band > h2 {
   margin: 0;
   color: #fbf8f3;
   font-family: var(--font-display);
-  font-size: clamp(1.9rem, 3vw, 2.8rem);
   font-weight: 400;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -444,7 +707,7 @@
   margin: 0;
   color: #3d342f;
   font-family: "Libre Baskerville", serif;
-  font-size: clamp(15px, 1.1vw, 17px);
+  font-size: var(--body-copy-size);
   font-weight: 400;
   line-height: 1.75;
   letter-spacing: 0;
@@ -453,7 +716,7 @@
 .travel-stay-band .travel-stay-lead {
   margin-bottom: 0.65rem;
   font-family: "Libre Baskerville", serif;
-  font-size: clamp(15px, 1.1vw, 17px);
+  font-size: var(--body-copy-size);
   font-weight: 400;
   line-height: 1.75;
   color: #541c21;
@@ -474,7 +737,7 @@
 
 .travel-stay-alternative p:last-child {
   color: #3d342f;
-  font-size: 0.9rem;
+  font-size: var(--body-copy-size);
   line-height: 1.8;
 }
 
@@ -488,13 +751,9 @@
   color: #541c21;
 }
 
-.travel-stay-band .travel-contact:hover {
-  background: #b48a4e;
-  color: #541c21;
-}
-
 .travel-itineraries {
   text-align: center;
+  padding: 0.5rem calc(1.4rem + 3vw) clamp(1.25rem, 2vw, 2rem);
 }
 
 .travel-itineraries h2 {
@@ -513,14 +772,95 @@
 }
 
 .travel-trip-copy {
-  max-width: 720px;
-  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+  max-width: 960px;
+  margin: 0 auto clamp(0.35rem, 0.7vw, 0.55rem);
   color: #3d342f;
   font-family: "Libre Baskerville", serif;
-  font-size: clamp(15px, 1.1vw, 17px);
+  font-size: var(--body-copy-size);
   font-weight: 400;
   line-height: 1.75;
   letter-spacing: 0;
+}
+
+.travel-intro.travel-ideas-intro {
+  padding: clamp(0.75rem, 1.5vw, 1.25rem) 0 clamp(1rem, 2vw, 1.5rem);
+}
+
+.travel-ideas-copy .travel-trip-copy {
+  max-width: none;
+  margin: 0 0 0.8rem;
+  text-align: left;
+}
+
+.travel-ideas-list {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.travel-ideas-photo {
+  width: min(36%, 420px);
+  text-align: center;
+}
+
+.travel-section .travel-ideas-intro > .travel-map-wrap {
+  margin-top: clamp(1.5rem, 2.5vw, 2rem);
+  margin-right: clamp(5rem, 9.5vw, 8.75rem);
+}
+
+.travel-ideas-photo > .travel-map {
+  width: min(100%, 420px);
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.travel-idea {
+  min-width: 0;
+}
+
+.travel-idea + .travel-idea {
+  margin-top: 1.2rem;
+}
+
+.travel-idea h3 {
+  margin: 0 0 0.45rem;
+  color: var(--burgundy-soft);
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.travel-idea h3::after {
+  display: block;
+  width: 2.25rem;
+  height: 1px;
+  margin-top: 0.35rem;
+  background: var(--brass);
+  content: "";
+}
+
+.travel-idea p {
+  margin: 0;
+  color: #3d342f;
+  font-family: var(--font-body);
+  font-size: var(--body-copy-size);
+  line-height: 1.48;
+}
+
+.travel-idea .travel-idea-note {
+  margin-top: 0.45rem;
+  color: var(--burgundy-soft);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.travel-idea--local {
+  max-width: 100%;
+  margin-top: 1.2rem;
 }
 
 .itinerary-featured {
@@ -671,6 +1011,186 @@
   text-align: left;
 }
 
+.hiring-car-card {
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.hiring-car-card h3 {
+  min-height: 0;
+  margin: 0 0 0.85rem;
+}
+
+.hiring-car-card > p {
+  margin: 0;
+  color: #3d342f;
+  font-family: "Libre Baskerville", serif;
+  font-size: var(--body-copy-size);
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+
+.hiring-car-card > p + p {
+  margin-top: 0.7rem;
+}
+
+.hiring-car-reassurance strong {
+  font-weight: 700;
+}
+
+.travel-guide-section.travel-practical-guide {
+  padding-top: 0;
+}
+
+.travel-quick-facts {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: 100vw;
+  margin: 0 calc(50% - 50vw) clamp(1rem, 2vw, 1.5rem);
+  overflow: hidden;
+  background: var(--ivory);
+}
+
+.quick-facts-media {
+  position: relative;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, #000 0%, #000 30%, transparent 65%);
+}
+
+.quick-facts-media img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% center;
+}
+
+.quick-facts-content {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  padding: 1.25rem 3vw;
+}
+
+.quick-facts-content h3 {
+  margin: 0;
+  color: var(--burgundy-soft);
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.quick-facts-content .travel-divider {
+  margin: 0.65rem auto 1rem;
+  color: var(--brass);
+}
+
+.quick-facts-content .travel-divider span {
+  background: var(--brass);
+}
+
+.travel-quick-facts .travel-quick-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 0.65rem;
+}
+
+.travel-quick-fact {
+  min-width: 0;
+  padding: 0.75rem;
+  border: 1px solid var(--brass);
+  background: linear-gradient(135deg, rgba(251, 248, 243, 0.75), rgba(251, 248, 243, 0.9));
+  box-shadow: none;
+  text-align: center;
+}
+
+.quick-fact-icon {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 auto 0.5rem;
+  fill: none;
+  stroke: var(--brass);
+  stroke-width: 1.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.travel-quick-fact h4 {
+  margin: 0 0 0.4rem;
+  color: var(--burgundy-soft);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+.travel-quick-fact p {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--body-copy-size);
+  line-height: 1.55;
+  overflow-wrap: break-word;
+}
+
+.travel-quick-fact a {
+  color: var(--burgundy-soft);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.quick-facts-note {
+  margin: 1rem 0 0;
+  font-family: var(--font-body);
+  font-size: var(--body-copy-size);
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media (min-width: 1100px) {
+  .travel-quick-facts {
+    grid-template-columns: minmax(0, 38fr) minmax(0, 62fr);
+    min-height: 640px;
+  }
+
+  .quick-facts-media {
+    position: absolute;
+    inset: 0;
+    aspect-ratio: auto;
+  }
+
+  .quick-facts-content {
+    grid-column: 2;
+    align-self: center;
+    padding: 4rem 3vw;
+  }
+
+  .travel-quick-facts .travel-quick-facts-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .quick-facts-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 359px) {
+  .travel-quick-facts .travel-quick-facts-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .itinerary-duration {
   color: #b48a4e;
   font-family: var(--font-display);
@@ -708,7 +1228,7 @@
   margin: auto 0 0;
   color: #541c21;
   font-family: "Libre Baskerville", serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.7;
   letter-spacing: 0.08em;
@@ -795,7 +1315,7 @@
   margin: 0;
   color: #3d342f;
   font-family: "Libre Baskerville", serif;
-  font-size: clamp(15px, 1.1vw, 16px);
+  font-size: var(--body-copy-size);
   font-weight: 400;
   line-height: 1.8;
   letter-spacing: 0;
@@ -811,10 +1331,10 @@
   letter-spacing: 0.08em;
 }
 
-.itinerary-finale,
-.itinerary-overnight {
-  margin-top: 0.55rem !important;
-  color: var(--burgundy) !important;
+.itinerary-day .itinerary-finale,
+.itinerary-day .itinerary-overnight {
+  margin-top: 0.55rem;
+  color: var(--burgundy);
   font-family: var(--font-display);
   font-style: italic;
 }
@@ -824,7 +1344,7 @@
   margin: 3rem auto 1rem;
   color: #3d342f;
   font-family: "Libre Baskerville", serif;
-  font-size: clamp(15px, 1.1vw, 16px);
+  font-size: var(--body-copy-size);
   font-weight: 400;
   line-height: 1.8;
   letter-spacing: 0;
@@ -846,4 +1366,3 @@
     transition: none;
   }
 }
-

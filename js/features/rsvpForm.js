@@ -20,7 +20,7 @@
     const attendance = document.getElementById("attendance")?.value || "";
     const mainCourse = document.getElementById("main-course")?.value.trim() || "";
     const message = document.getElementById("message")?.value.trim() || "";
-    const song = document.getElementById("song")?.value.trim() || "";
+    const song = attendance === "Yes" ? document.getElementById("song")?.value.trim() || "" : "";
 
     if (attendance !== "Yes" && attendance !== "No") {
       showError(t("rsvp.validation_attendance", getCurrentLanguage()));

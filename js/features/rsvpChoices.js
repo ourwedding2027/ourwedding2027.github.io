@@ -3,6 +3,7 @@
   const rsvpRight = document.getElementById("rsvp-right");
   const attendingFields = document.querySelector(".rsvp-attending-fields");
   const speechField = document.querySelector(".rsvp-speech-field");
+  const songBlock = document.querySelector(".rsvp-song-block");
   const lowerGrid = document.querySelector(".rsvp-lower-grid");
 
   const openCard = () => {
@@ -24,6 +25,7 @@
 
     if (attendingFields) attendingFields.hidden = !isAttending;
     if (speechField) speechField.hidden = !isAttending;
+    if (songBlock) songBlock.hidden = !isAttending;
     if (lowerGrid) lowerGrid.classList.toggle("is-decline", isDeclining);
   };
 

@@ -277,7 +277,7 @@
   margin: 1.35rem 0 0;
   color: var(--celebration-card-ink);
   font-family: "Libre Baskerville", serif;
-  font-size: clamp(15px, 1.1vw, 16px);
+  font-size: var(--body-copy-size);
   font-style: normal;
   font-weight: 400;
   line-height: 1.8;
@@ -289,7 +289,7 @@
   margin: 1.45rem auto 0;
   color: #3d342f;
   font-family: "Libre Baskerville", serif;
-  font-size: clamp(15px, 1.1vw, 17px);
+  font-size: var(--body-copy-size);
   font-style: normal;
   font-weight: 400;
   line-height: 1.8;
@@ -395,7 +395,7 @@
   margin: 0;
   color: var(--celebration-brass);
   font-family: "Cormorant Garamond", serif;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -654,7 +654,7 @@
   margin: 0;
   color: #3d342f;
   font-family: var(--font-body);
-  font-size: clamp(0.9rem, 1vw, 1rem);
+  font-size: var(--body-copy-size);
   line-height: 1.7;
   letter-spacing: 0.01em;
   text-align: center;
@@ -797,7 +797,7 @@
 .venue-hero-stay p {
   margin: 0.55rem 0 0;
   font-family: "Libre Baskerville", serif;
-  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  font-size: var(--body-copy-size);
   line-height: 1.7;
   color: #541c21;
 }
@@ -819,7 +819,7 @@
 .venue-hero-copy {
   margin: 0;
   font-family: "Libre Baskerville", serif;
-  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  font-size: var(--body-copy-size);
   line-height: 1.7;
   color: #541c21;
 }
@@ -889,5 +889,5 @@
 .registry-card p {
   margin: 0;
   opacity: 0.84;
-  font-size: 0.9rem;
+  font-size: var(--body-copy-size);
 }

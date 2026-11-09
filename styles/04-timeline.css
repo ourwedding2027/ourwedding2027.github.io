@@ -78,7 +78,7 @@
 
 .timeline-stop h3 { margin: 0.8rem 0 0; color: var(--burgundy); text-transform: uppercase; letter-spacing: 0.08em; font-size: 1.02rem; font-family: var(--font-display); }
 
-.timeline-stop p { margin: 0.35rem 0 0; color: #34312f; font-family: var(--font-body); font-size: clamp(1.05rem, 1.5vw, 1.2rem); line-height: 1.5; letter-spacing: normal; font-style: normal; opacity: 1; }
+.timeline-stop p { margin: 0.35rem 0 0; color: #34312f; font-family: var(--font-body); font-size: var(--body-copy-size); line-height: 1.5; letter-spacing: normal; font-style: normal; opacity: 1; }
 
 .timeline-thanks { text-align: center; margin: 2rem 0 0; color: var(--burgundy); font-size: 2rem; font-family: var(--font-script); }
 

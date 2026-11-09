@@ -51,19 +51,4 @@ export function initTravelGuide(t) {
     });
   }
 
-  document.querySelectorAll(".itinerary-toggle").forEach((button) => {
-    const content = document.getElementById(button.getAttribute("aria-controls"));
-    if (!content) return;
-
-    button.addEventListener("click", () => {
-      const isOpen = button.getAttribute("aria-expanded") === "true";
-      setDisclosure(
-        button,
-        content,
-        !isOpen,
-        t("travel.close_itinerary"),
-        t("travel.view_itinerary")
-      );
-    });
-  });
 }

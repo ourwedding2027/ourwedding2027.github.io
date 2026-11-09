@@ -136,7 +136,7 @@
   margin: 0.85rem 0 0;
   color: #b48a4e;
   font-family: "Libre Baskerville", serif;
-  font-size: clamp(14px, 1.1vw, 16px);
+  font-size: var(--body-copy-size);
   font-weight: 400;
   letter-spacing: 0.12em;
   line-height: 1.7;
@@ -181,7 +181,7 @@
   margin: 0.5rem 0 0;
   color: #3d342f;
   font-family: "Libre Baskerville", serif;
-  font-size: clamp(14px, 1.05vw, 16px);
+  font-size: var(--body-copy-size);
   font-weight: 400;
   line-height: 1.55;
 }
@@ -199,7 +199,7 @@
 .rsvp-attendance legend {
   width: 100%;
   margin-bottom: 0.6rem;
-  font-size: clamp(1.25rem, 1.8vw, 1.6rem);
+  font-size: 1.2rem;
 }
 
 .rsvp-choice-grid {
@@ -267,7 +267,7 @@
 .rsvp-choice strong {
   color: #541c21;
   font-family: var(--font-display);
-  font-size: 1.32rem;
+  font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -276,7 +276,7 @@
 .rsvp-choice small {
   color: #3d342f;
   font-family: "Libre Baskerville", serif;
-  font-size: 0.96rem;
+  font-size: 0.95rem;
   font-style: italic;
   line-height: 1.6;
 }
@@ -310,7 +310,7 @@
   margin: 0 0 0.35rem;
   color: #3d342f;
   font-family: "Libre Baskerville", serif;
-  font-size: clamp(13px, 1.05vw, 15px);
+  font-size: var(--body-copy-size);
   font-weight: 400;
   line-height: 1.7;
 }
@@ -318,7 +318,7 @@
 .rsvp-song-subtitle {
   color: #b48a4e;
   font-family: var(--font-display);
-  font-size: clamp(17px, 1.35vw, 18px);
+  font-size: clamp(21px, 1.7vw, 24px);
   font-weight: 700;
   font-style: italic;
   line-height: 1.4;
@@ -400,7 +400,7 @@
 .rsvp-speech-title {
   color: #541c21;
   font-family: var(--font-display);
-  font-size: clamp(17px, 1.35vw, 18px);
+  font-size: clamp(21px, 1.7vw, 24px);
   font-weight: 400;
   font-style: italic;
   line-height: 1.4;
@@ -410,7 +410,7 @@
   margin: 0.35rem 0 0;
   color: #3d342f;
   font-family: "Libre Baskerville", serif;
-  font-size: clamp(13px, 1vw, 14px);
+  font-size: var(--body-copy-size);
   line-height: 1.6;
 }
 
@@ -427,34 +427,45 @@
   margin: 0 0 0.45rem;
   color: #3d342f;
   font-family: "Libre Baskerville", serif;
-  font-size: clamp(12px, 0.95vw, 13px);
+  font-size: var(--body-copy-size);
   line-height: 1.6;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .rsvp-song-input-row {
   display: flex;
-  align-items: center;
-  gap: clamp(0.9rem, 2vw, 1.35rem);
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.3rem;
   width: 100%;
 }
 
 .rsvp-song-input-row input {
-  flex: 0 1 520px;
-  width: min(100%, 520px);
-  margin-bottom: 0.25rem;
-}
-
-.rsvp-song-input-row .rsvp-song-icon {
-  margin-bottom: 0.25rem;
+  flex: none;
+  width: 100%;
+  margin-bottom: 0;
 }
 
 .rsvp-song-icon {
   flex: 0 0 auto;
-  width: clamp(48px, 4.6vw, 62px);
-  height: clamp(48px, 4.6vw, 62px);
+  align-self: center;
+  width: 200px;
+  height: 80px;
+  margin: 0;
   object-fit: contain;
   opacity: 0.9;
+}
+
+@media (min-width: 769px) {
+  .rsvp-song-icon {
+    flex: 0 0 auto;
+    align-self: center;
+    width: 235px;
+    height: 117px;
+    margin: 0;
+    object-fit: contain;
+    opacity: 0.9;
+  }
 }
 
 .rsvp-feedback {
@@ -462,7 +473,7 @@
   text-align: center;
   color: #541c21;
   font-family: "Libre Baskerville", serif;
-  font-size: 0.94rem;
+  font-size: var(--body-copy-size);
   line-height: 1.6;
 }
 
@@ -532,6 +543,7 @@
   margin: 0;
   color: #3d342f;
   font-family: "Libre Baskerville", serif;
+  font-size: var(--body-copy-size);
   line-height: 1.7;
 }
 
@@ -586,12 +598,26 @@
     font-size: clamp(2rem, 9.6vw, 3rem);
   }
 
+  .rsvp-attendance legend {
+    font-size: 1.05rem;
+  }
+
   .rsvp-intro,
   .rsvp-intro-alt,
   .rsvp-field-help,
-  .rsvp-song-subtitle,
   .rsvp-speech-copy {
-    font-size: 1rem;
+    font-size: var(--body-copy-size);
+  }
+
+  .rsvp-field input,
+  .rsvp-field textarea,
+  .rsvp-message-section textarea,
+  .rsvp-song-content input,
+  .rsvp-field input::placeholder,
+  .rsvp-field textarea::placeholder,
+  .rsvp-message-section textarea::placeholder,
+  .rsvp-song-content input::placeholder {
+    font-size: 0.95rem;
   }
 
   .rsvp-choice {
@@ -607,13 +633,12 @@
   }
 
   .rsvp-song-prompt-line {
-    font-size: 0.92rem;
-    white-space: nowrap;
+    font-size: var(--body-copy-size);
+    white-space: normal;
   }
 
-  .rsvp-song-prompt-line .rsvp-song-subtitle,
   .rsvp-song-prompt-line .rsvp-field-help {
-    font-size: 0.92rem;
+    font-size: var(--body-copy-size);
   }
 }
 

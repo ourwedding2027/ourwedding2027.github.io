@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -28,8 +28,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Libre+Baskerville:wght@400;700&display=swap&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260818-4">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261106-1">
 </head>
 <body>
   <a href="#main-content" class="skip-navigation" data-i18n="common.skip_navigation">Skip to main content</a>
@@ -165,7 +165,7 @@
             <div>
               <p class="wedding-event-time">13:00</p>
               <h3 data-i18n="wedding_timeline.event1_title">Ceremony</h3>
-              <p data-i18n="wedding_timeline.event1_note">Vows, tears, and one very nervous groom.</p>
+              <p data-i18n="wedding_timeline.event1_note">The moment we’ve been waiting for.</p>
             </div>
           </article>
           <article class="wedding-event">
@@ -175,7 +175,7 @@
             <div>
               <p class="wedding-event-time">15:00</p>
               <h3 data-i18n="wedding_timeline.event2_title">Drinks Reception</h3>
-              <p data-i18n="wedding_timeline.event2_note">Bubbles first, speeches later.</p>
+              <p data-i18n="wedding_timeline.event2_note">Raise a glass and settle into the celebrations.</p>
             </div>
           </article>
           <article class="wedding-event">
@@ -185,7 +185,7 @@
             <div>
               <p class="wedding-event-time">17:00</p>
               <h3 data-i18n="wedding_timeline.event3_title">Dinner</h3>
-              <p data-i18n="wedding_timeline.event3_note">Fork this way, please.</p>
+              <p data-i18n="wedding_timeline.event3_note">Good food, good company, and a few speeches.</p>
             </div>
           </article>
           <article class="wedding-event">
@@ -195,7 +195,7 @@
             <div>
               <p class="wedding-event-time">19:00</p>
               <h3 data-i18n="wedding_timeline.event4_title">Cake</h3>
-              <p data-i18n="wedding_timeline.event4_note">Sugar, spice, and a shared slice.</p>
+              <p data-i18n="wedding_timeline.event4_note">..because love is sweet!</p>
             </div>
           </article>
           <article class="wedding-event">
@@ -205,7 +205,7 @@
             <div>
               <p class="wedding-event-time">19:30</p>
               <h3 data-i18n="wedding_timeline.event5_title">Let's Dance!</h3>
-              <p data-i18n="wedding_timeline.event5_note">Brace yourselves...the party can't be stopped!</p>
+              <p data-i18n="wedding_timeline.event5_note">Brace yourselves, the party cannot be stopped!</p>
             </div>
           </article>
         </div>
@@ -349,18 +349,21 @@
     </section>
 
     <section id="travel" class="travel-section">
+      <div class="travel-intro-header">
+        <p class="travel-kicker" data-i18n="travel.kicker">Travel Information</p>
+        <div class="travel-divider" aria-hidden="true"><span></span><b>&hearts;</b><span></span></div>
+      </div>
       <div class="travel-intro">
-        <div class="travel-intro-copy">
-          <p class="travel-kicker" data-i18n="travel.kicker">Travel Information</p>
-          <div class="travel-divider" aria-hidden="true"><span></span><b>&hearts;</b><span></span></div>
-          <p class="travel-script" data-i18n="travel.script">Your journey to Ireland</p>
-          <p class="travel-lead" data-i18n="travel.lead">Whether you’re travelling from near or far, we’re so grateful you’re making the journey to celebrate with us.</p>
-          <p data-i18n="travel.intro">We’ve gathered everything you need for planning your visit — airports, getting to Cookstown, accommodation and a few ideas for exploring Ireland while you’re here.</p>
-          <button class="travel-toggle" type="button" aria-expanded="false" aria-controls="travel-guide-details" data-i18n-closed="travel.explore" data-i18n-open="travel.close_guide">Explore Travel Guide &darr;</button>
-        </div>
         <div class="travel-map-wrap">
           <img class="travel-map" src="assets/heros/Ireland_travel.png" alt="Ireland coastline with a travelling airplane" data-i18n-alt="travel.map_alt" loading="lazy">
           <p class="travel-map-caption" data-i18n="travel.map_caption">Dunluce Castle, Northern Ireland</p>
+        </div>
+        <div class="travel-intro-copy">
+          <p class="travel-script" data-i18n="travel.script">Your journey to Ireland</p>
+          <p class="travel-lead" data-i18n="travel.lead">Whether you’re travelling from near or far, we’re so grateful you’re making the journey to celebrate with us.</p>
+          <p data-i18n="travel.intro">We’ve gathered the essentials to help you plan your visit: airport options, getting around and travelling to the wedding venues, accommodation, and a few ideas for exploring Ireland while you’re here.</p>
+          <p data-i18n="travel.intro_options">There are several ways to make your way to the wedding, and the best option really depends on how long you are staying and what you would like to make of your time in Ireland and Northern Ireland.</p>
+          <button class="travel-toggle" type="button" aria-expanded="false" aria-controls="travel-guide-details" data-i18n-closed="travel.explore" data-i18n-open="travel.close_guide">Explore Travel Guide &darr;</button>
         </div>
       </div>
 
@@ -372,31 +375,127 @@
           </div>
           <div class="airport-grid">
             <article class="airport-item">
-              <svg class="airport-plane" viewBox="0 0 32 32" aria-hidden="true">
-                <path d="M3 17.5h9.5l5.2-9.5h2.1l-1.3 9.5h7.8c1.7 0 2.7.7 2.7 1.5s-1 1.5-2.7 1.5h-7.8l1.3 9.5h-2.1l-5.2-9.5H3l3.2-1.5L3 17.5Z" />
-              </svg>
-              <span class="airport-code">BFS</span>
-              <h3 data-i18n="travel.bfs_title">Belfast International Airport</h3>
-              <p data-i18n="travel.bfs_details">The closest airport to our venue, with connections to many destinations. From Hungary, a connecting flight is required, with routes via England often the most convenient.</p>
-              <small data-i18n="travel.bfs_time">Approx. 40 minutes from the venue · Car &amp; bus options available</small>
+              <div class="airport-identity">
+                <div class="airport-code-line">
+                  <span class="airport-code">BFS</span>
+                  <svg class="airport-plane" viewBox="0 0 32 32" aria-hidden="true">
+                    <path d="M3 17.5h9.5l5.2-9.5h2.1l-1.3 9.5h7.8c1.7 0 2.7.7 2.7 1.5s-1 1.5-2.7 1.5h-7.8l1.3 9.5h-2.1l-5.2-9.5H3l3.2-1.5L3 17.5Z" />
+                  </svg>
+                </div>
+                <h3 data-i18n="travel.bfs_title">Belfast International Airport</h3>
+              </div>
+              <div class="airport-details">
+                <p data-i18n="travel.bfs_details">Belfast International is the closest major airport to the wedding area and a good option if you would prefer to arrive directly into Northern Ireland.</p>
+                <p><span data-i18n="travel.bfs_direct_seasonal">Direct flights from Budapest have operated seasonally in previous years, so it is worth checking Ryanair and easyJet first.</span> <span data-i18n="travel.bfs_flights_label">If no direct route is available, common connections include:</span></p>
+                <ul class="airport-flight-options">
+                  <li>
+                    <span data-i18n="travel.hungary_flight_route1">Budapest or Debrecen → London Luton → Belfast</span> — <em class="airport-route-airline" data-i18n="travel.bfs_flight_airline1">Wizz Air + easyJet</em>
+                  </li>
+                  <li>
+                    <span data-i18n="travel.hungary_flight_route2">Budapest → London Stansted → Belfast</span> — <em class="airport-route-airline" data-i18n="travel.bfs_flight_airline2">Ryanair</em>
+                  </li>
+                </ul>
+                <p data-i18n="travel.bfs_details_onward">From the airport, you can continue to Belfast or Cookstown by bus, taxi or hire car.</p>
+                <p class="airport-best-for"><strong data-i18n="travel.best_for">Best for:</strong> <span data-i18n="travel.bfs_best_for">Northern Ireland · Causeway Coast · Shorter journey to Cookstown</span></p>
+                <small data-i18n="travel.bfs_time">Approx. 40 minutes from the venue · Car &amp; bus options available</small>
+              </div>
             </article>
             <article class="airport-item">
-              <svg class="airport-plane" viewBox="0 0 32 32" aria-hidden="true">
-                <path d="M3 17.5h9.5l5.2-9.5h2.1l-1.3 9.5h7.8c1.7 0 2.7.7 2.7 1.5s-1 1.5-2.7 1.5h-7.8l1.3 9.5h-2.1l-5.2-9.5H3l3.2-1.5L3 17.5Z" />
-              </svg>
-              <span class="airport-code">BHD</span>
-              <h3 data-i18n="travel.bhd_title">Belfast City Airport</h3>
-              <p data-i18n="travel.bhd_details">Ideal for combining your trip with a stay in Belfast. From Hungary, connecting routes are available, including convenient options via Amsterdam and Great Britain.</p>
-              <small data-i18n="travel.bhd_time">Approx. 1 hour from the venue · Car &amp; bus options available</small>
+              <div class="airport-identity">
+                <div class="airport-code-line">
+                  <span class="airport-code">BHD</span>
+                  <svg class="airport-plane" viewBox="0 0 32 32" aria-hidden="true">
+                    <path d="M3 17.5h9.5l5.2-9.5h2.1l-1.3 9.5h7.8c1.7 0 2.7.7 2.7 1.5s-1 1.5-2.7 1.5h-7.8l1.3 9.5h-2.1l-5.2-9.5H3l3.2-1.5L3 17.5Z" />
+                  </svg>
+                </div>
+                <h3 data-i18n="travel.bhd_title">Belfast City Airport</h3>
+              </div>
+              <div class="airport-details">
+                <p data-i18n="travel.bhd_details">Belfast City Airport is very close to the city centre and a great option if you would like to spend some time exploring Belfast before travelling to Cookstown.</p>
+                <p data-i18n="travel.bhd_flights_label">Flights from Hungary require a connection. Common options include:</p>
+                <ul class="airport-flight-options">
+                  <li>
+                    <span data-i18n="travel.bhd_flight_route1">Budapest → Amsterdam → Belfast City</span> — <em class="airport-route-airline" data-i18n="travel.bhd_flight_airline1">KLM</em>
+                  </li>
+                  <li>
+                    <span data-i18n="travel.bhd_flight_route2">Budapest → London Heathrow → Belfast City</span> — <em class="airport-route-airline" data-i18n="travel.bhd_flight_airline2">British Airways</em>
+                  </li>
+                </ul>
+                <p data-i18n="travel.bhd_details_central">If you stay centrally, many of Belfast’s main sights are easy to reach on foot or by public transport.</p>
+                <p data-i18n="travel.bhd_details_cookstown">From Belfast, regular bus services continue to Cookstown.</p>
+                <p class="airport-best-for"><strong data-i18n="travel.best_for">Best for:</strong> <span data-i18n="travel.bhd_best_for">Belfast city break · Easy city-centre access · Northern Ireland sightseeing</span></p>
+                <small data-i18n="travel.bhd_time">Approx. 1 hour from the venue · Car &amp; bus options available</small>
+              </div>
             </article>
             <article class="airport-item">
-              <svg class="airport-plane" viewBox="0 0 32 32" aria-hidden="true">
-                <path d="M3 17.5h9.5l5.2-9.5h2.1l-1.3 9.5h7.8c1.7 0 2.7.7 2.7 1.5s-1 1.5-2.7 1.5h-7.8l1.3 9.5h-2.1l-5.2-9.5H3l3.2-1.5L3 17.5Z" />
-              </svg>
-              <span class="airport-code">DUB</span>
-              <h3 data-i18n="travel.dub_title">Dublin Airport</h3>
-              <p data-i18n="travel.dub_details">The easiest option for direct travel from Budapest, with excellent international connections and regular coach services north to Northern Ireland.</p>
-              <small data-i18n="travel.dub_time">Approx. 2 hours from the venue · Car &amp; coach options available</small>
+              <div class="airport-identity">
+                <div class="airport-code-line">
+                  <span class="airport-code">DUB</span>
+                  <svg class="airport-plane" viewBox="0 0 32 32" aria-hidden="true">
+                    <path d="M3 17.5h9.5l5.2-9.5h2.1l-1.3 9.5h7.8c1.7 0 2.7.7 2.7 1.5s-1 1.5-2.7 1.5h-7.8l1.3 9.5h-2.1l-5.2-9.5H3l3.2-1.5L3 17.5Z" />
+                  </svg>
+                </div>
+                <h3 data-i18n="travel.dub_title">Dublin Airport</h3>
+              </div>
+              <div class="airport-details">
+                <p data-i18n="travel.dub_details">Dublin is one of the easiest options for guests travelling from Hungary, with direct flights from Budapest currently available with Aer Lingus and Ryanair.</p>
+                <p data-i18n="travel.dub_details_holiday">It is also a great choice if you would like to spend some time exploring Dublin or visit the west coast, including Galway, Doolin and the Cliffs of Moher.</p>
+                <p data-i18n="travel.dub_details_onward">From Dublin, you can continue north by coach, train to Belfast, or hire a car. Direct coach options to Cookstown are also available.</p>
+                <p class="airport-best-for"><strong data-i18n="travel.best_for">Best for:</strong> <span data-i18n="travel.dub_best_for">Direct flights from Budapest · Dublin sightseeing · West Coast trips · Flexible onward travel</span></p>
+                <small data-i18n="travel.dub_time">Approx. 2 hours from the venue · Car &amp; coach options available</small>
+              </div>
+            </article>
+          </div>
+          <div class="airport-disclaimers">
+            <p class="itinerary-transport airport-disclaimers-title"><strong data-i18n="travel.airport_disclaimer_title">Remember</strong> <span data-i18n="travel.flight_schedule_note">Flight schedules and routes may change before October 2027, so these are intended as examples only. Please check current schedules and connection times before booking.</span> <span data-i18n="travel.airport_note_different_airports">Belfast International Airport (BFS) and Belfast City Airport (BHD) are two different airports.</span> <span data-i18n="travel.airport_note_connection_tickets">If you're booking separate airline tickets through London, allow plenty of connection time, especially if you have checked baggage. Check baggage allowances and fees separately when combining different airlines.</span></p>
+          </div>
+        </section>
+
+        <section class="travel-guide-section travel-getting-around" aria-labelledby="getting-around-title">
+          <div class="travel-section-heading">
+            <h2 id="getting-around-title" data-i18n="travel.around_title">Getting Around</h2>
+            <div class="travel-divider" aria-hidden="true"><span></span><b>&hearts;</b><span></span></div>
+          </div>
+          <p class="getting-around-intro" data-i18n="travel.around_intro">There are several ways to get to and around the area. Choose the option that works best for you.</p>
+          <div class="getting-around-grid">
+            <article class="getting-around-card">
+              <svg class="getting-around-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 17-1 2v1M19 17l1 2v1M5 8l2-5h10l2 5M3 8h18v9H3zM7 12h.01M17 12h.01M2 8h1M21 8h1"/></svg>
+              <h3 data-i18n="travel.around_car_title">Car Hire</h3>
+              <p data-i18n="travel.around_car_copy">A car can be a great option if you would like flexibility, especially for rural areas or the North Coast.</p>
+              <p><span data-i18n="travel.around_car_driving_prefix">Cars drive on the </span><strong data-i18n="travel.around_car_driving_left">left</strong><span data-i18n="travel.around_car_driving_suffix"> in both the Republic of Ireland and Northern Ireland, and a valid EU driving licence is accepted for visitors. If hiring in Dublin, check that cross-border travel into Northern Ireland is permitted and covered.</span></p>
+              <p><span data-i18n="travel.around_car_units_prefix">The Republic of Ireland uses </span><strong data-i18n="travel.around_car_units_metric">kilometres and km/h</strong><span data-i18n="travel.around_car_units_between">, while Northern Ireland uses </span><strong data-i18n="travel.around_car_units_imperial">miles and mph</strong>.</p>
+            </article>
+            <article class="getting-around-card">
+              <svg class="getting-around-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M9 3v8M15 3v8M7 19v2M17 19v2M7 15h.01M17 15h.01M1 7v4M23 7v4"/></svg>
+              <h3 data-i18n="travel.around_coaches_title">Coaches</h3>
+              <p><span data-i18n="travel.around_coaches_copy">Direct coach services are available from </span><strong data-i18n="travel.around_coaches_direct">Dublin Airport to Cookstown with Translink X4 and AirCoach</strong>.</p>
+              <p><span data-i18n="travel.around_coaches_city_prefix">For </span><strong data-i18n="travel.around_coaches_city_route">Dublin to Belfast</strong><span data-i18n="travel.around_coaches_city_copy">, there are frequent services with </span><strong data-i18n="travel.around_coaches_city_operators">Aircoach, Dublin Express and Translink X1/X2</strong>.</p>
+              <p><span data-i18n="travel.around_coaches_local_prefix">From </span><strong data-i18n="travel.around_coaches_local_route">Belfast to Cookstown</strong><span data-i18n="travel.around_coaches_local_copy">, Translink operates regular </span><strong data-i18n="travel.around_coaches_local_services">209/209b</strong><span data-i18n="travel.around_coaches_local_suffix"> services from Belfast Grand Central Station.</span></p>
+              <p class="getting-around-links">
+                <a href="https://www.translink.co.uk/" target="_blank" rel="noreferrer" data-i18n="travel.around_trains_link">Plan Your Journey with Translink | Bus &amp; Train NI</a>
+                <a href="https://book.aircoach.ie/" target="_blank" rel="noreferrer" data-i18n="travel.around_coaches_aircoach">AirCoach</a>
+                <a href="https://www.dublinexpress.ie/" target="_blank" rel="noreferrer" data-i18n="travel.dublin_express">Dublin Express</a>
+              </p>
+            </article>
+            <article class="getting-around-card">
+              <svg class="getting-around-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="3" width="14" height="15" rx="3"/><path d="M5 10h14M12 3v7M8 18l-3 3M16 18l3 3M8 21h8M8 14h.01M16 14h.01"/></svg>
+              <h3 data-i18n="travel.around_trains_title">Trains</h3>
+              <p><span data-i18n="travel.around_trains_copy">Trains run directly between </span><strong data-i18n="travel.around_trains_dublin">Dublin Connolly</strong><span data-i18n="travel.around_trains_and"> and </span><strong data-i18n="travel.around_trains_belfast">Belfast Grand Central Station</strong><span data-i18n="travel.around_trains_direct_suffix">, making it an easy and comfortable city-centre-to-city-centre option.</span></p>
+              <p><span data-i18n="travel.around_trains_onward_prefix">There is </span><strong data-i18n="travel.around_trains_no_connection">no direct rail connection from Belfast to Cookstown</strong><span data-i18n="travel.around_trains_onward_suffix">, so the onward journey needs to be made by coach, taxi or car.</span></p>
+              <p class="getting-around-links">
+                <a href="https://www.translink.co.uk/" target="_blank" rel="noreferrer" data-i18n="travel.around_trains_link">Plan Your Journey with Translink | Bus &amp; Train NI</a>
+              </p>
+            </article>
+            <article class="getting-around-card">
+              <svg class="getting-around-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="2"/><path d="m2 20 7-14 7 14H2zM12 12l3-5 7 13h-6M6 12l3 2 3-2"/></svg>
+              <h3 data-i18n="travel.around_tours_title">Day Tours</h3>
+              <p><span data-i18n="travel.around_tours_copy">You don’t need a car to explore more of Ireland. Day tours run from </span><strong data-i18n="travel.around_tours_belfast">Belfast to the North Coast</strong><span data-i18n="travel.around_tours_coast_copy">, including Dunluce Castle, Portrush and Game of Thrones locations, and from </span><strong data-i18n="travel.around_tours_dublin">Dublin to Galway, Doolin and the Cliffs of Moher</strong>.</p>
+              <p class="getting-around-links getting-around-tour-links">
+                <a href="https://www.getyourguide.com/en-gb/causeway-coast-and-glens-l260417/" target="_blank" rel="noreferrer" data-i18n="travel.around_tours_north_label">North Coast tours from Belfast</a>
+                <a href="https://www.getyourguide.com/en-gb/cliffs-of-moher-l4550/" target="_blank" rel="noreferrer" data-i18n="travel.around_tours_cliffs_label">West Coast Tours from Dublin</a>
+                <a href="https://www.getyourguide.com/en-gb/galway-l804/day-trips-tc172?departsFrom=31" target="_blank" rel="noreferrer" data-i18n="travel.around_tours_west_label">Galway Tours from Dublin</a>
+              </p>
+              <p class="getting-around-note"><em data-i18n="travel.around_tours_note">Laura has used GetYourGuide successfully before and had a good experience. We’d still recommend checking the latest reviews, ratings and itinerary before booking.</em></p>
             </article>
           </div>
         </section>
@@ -413,12 +512,108 @@
           </div>
         </section>
 
-        <section class="travel-itineraries">
-          <h2 data-i18n="travel.trip_title">Make a Trip of It</h2>
-          <div class="travel-divider itinerary-divider" aria-hidden="true"><span></span><b>&hearts;</b><span></span></div>
-          <p class="travel-script" data-i18n="travel.trip_script">Stay for a little while...</p>
-          <p class="travel-trip-copy" data-i18n="travel.trip_copy">Coming all this way? We’ve put together a few ideas for making the most of your time in Ireland — whether you’re joining us just for the celebrations or turning the wedding into a little Irish adventure.</p>
+        <section class="travel-guide-section travel-practical-guide">
+          <section class="travel-quick-facts" aria-labelledby="travel-quick-facts-title">
+            <div class="quick-facts-media" aria-hidden="true">
+              <img src="assets/heros/hero_cliffs_moher.png" alt="" loading="lazy">
+            </div>
+            <div class="quick-facts-content">
+              <h3 id="travel-quick-facts-title" data-i18n="travel.facts_title">Quick Facts</h3>
+              <div class="travel-divider" aria-hidden="true"><span></span><b>&hearts;</b><span></span></div>
+              <div class="travel-quick-facts-grid">
+                <article class="travel-quick-fact">
+                  <svg class="quick-fact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 17-1 2v1M19 17l1 2v1M5 8l2-5h10l2 5M3 8h18v9H3zM7 12h.01M17 12h.01"/></svg>
+                  <h4 data-i18n="travel.facts_driving_label">Driving</h4>
+                  <p data-i18n="travel.facts_driving_value">Drive on the left</p>
+                </article>
+                <article class="travel-quick-fact">
+                  <svg class="quick-fact-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="1"/><circle cx="12" cy="12" r="3"/><path d="M6 12h.01M18 12h.01"/></svg>
+                  <h4 data-i18n="travel.facts_currency_label">Currency</h4>
+                  <p data-i18n="travel.facts_currency_ireland">Republic of Ireland — € EUR</p>
+                  <p data-i18n="travel.facts_currency_northern">Northern Ireland — £ GBP</p>
+                </article>
+                <article class="travel-quick-fact">
+                  <svg class="quick-fact-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="1"/><circle cx="12" cy="10" r="4"/><path d="M8 18h8M8 10h8M12 6a8 8 0 0 1 0 8 8 8 0 0 1 0-8"/></svg>
+                  <h4 data-i18n="travel.facts_entry_label">Entry</h4>
+                  <p><span data-i18n="travel.facts_entry_prefix">Hungarian/EU citizens: travel with a valid passport, not a national ID card. Please </span><a href="https://www.gov.uk/eta/apply" target="_blank" rel="noreferrer" data-i18n="travel.facts_entry_link">check UK ETA requirements</a><span data-i18n="travel.facts_entry_suffix"> before travelling to Northern Ireland</span></p>
+                </article>
+                <article class="travel-quick-fact">
+                  <svg class="quick-fact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3v5M16 3v5M6 8h12v4a6 6 0 0 1-12 0V8zM12 18v4M12 5v3"/></svg>
+                  <h4 data-i18n="travel.facts_plugs_label">Plugs</h4>
+                  <p data-i18n="travel.facts_plugs_value">Type G three-pin plugs. Bring an adapter from home, or get one at the airport before you travel.</p>
+                </article>
+                <article class="travel-quick-fact">
+                  <svg class="quick-fact-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 5h4M12 18h.01"/></svg>
+                  <h4 data-i18n="travel.facts_mobile_label">Mobile</h4>
+                  <p data-i18n="travel.facts_mobile_value">EU roaming applies in Ireland; check UK roaming with your provider</p>
+                </article>
+                <article class="travel-quick-fact">
+                  <svg class="quick-fact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H4a1 1 0 0 0-1 1 17 17 0 0 0 17 17 1 1 0 0 0 1-1v-4l-5-2-2 3a13 13 0 0 1-7-7l3-2-2-5z"/></svg>
+                  <h4 data-i18n="travel.facts_emergency_label">Emergency</h4>
+                  <p data-i18n="travel.facts_emergency_value">112 or 999</p>
+                </article>
+                <article class="travel-quick-fact">
+                  <svg class="quick-fact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 16a4 4 0 1 1 1-7 5 5 0 0 1 9 3 2 2 0 0 1 0 4H7zM8 19l-1 2M13 19l-1 2M18 19l-1 2M3 3l1 1M10 2v2M2 9h2"/></svg>
+                  <h4 data-i18n="travel.facts_weather_label">Weather</h4>
+                  <p><span data-i18n="travel.facts_weather_prefix">October is usually around </span><strong data-i18n="travel.facts_weather_temperature">10–15°C</strong><span data-i18n="travel.facts_weather_suffix"> and can feel quite mild, but the weather is changeable. Bring layers, a waterproof jacket and an umbrella.</span></p>
+                </article>
+                <article class="travel-quick-fact">
+                  <svg class="quick-fact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 10v4M12 18v3M3 12h6M6 9l3 3-3 3M21 12h-6M18 9l-3 3 3 3"/></svg>
+                  <h4 data-i18n="travel.facts_border_label">Border Crossing</h4>
+                  <p data-i18n="travel.facts_border_value">No border checks between the Republic of Ireland and Northern Ireland, but UK entry and ETA requirements still apply.</p>
+                </article>
+                <article class="travel-quick-fact">
+                  <svg class="quick-fact-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M6 15h3M16 13a3 3 0 0 1 0 4M19 12a5 5 0 0 1 0 6"/></svg>
+                  <h4 data-i18n="travel.facts_payment_label">Payment</h4>
+                  <p data-i18n="travel.facts_payment_value">Cards and contactless are widely accepted.</p>
+                </article>
+              </div>
+              <p class="quick-facts-note" data-i18n="travel.facts_note">Travel requirements can change, so please check the latest official guidance before travelling.</p>
+            </div>
+          </section>
+        </section>
 
+        <section class="travel-itineraries">
+          <h2 data-i18n="travel.ideas_title">A Few Ideas While You’re Here</h2>
+          <div class="travel-divider itinerary-divider" aria-hidden="true"><span></span><b>&hearts;</b><span></span></div>
+          <p class="travel-trip-copy" data-i18n="travel.ideas_intro">If you have a little extra time around the wedding, there are plenty of lovely places to explore.</p>
+
+          <div class="travel-intro travel-ideas-intro">
+            <div class="travel-map-wrap travel-ideas-photo">
+              <img class="travel-map" src="assets/heros/dublin.jpg" alt="" aria-hidden="true" loading="lazy">
+              <p class="travel-map-caption" data-i18n="travel.idea_dublin_title">Dublin</p>
+              <img class="travel-map" src="assets/heros/cookstown.jpeg" alt="Killymoon Castle" loading="lazy">
+              <p class="travel-map-caption" data-i18n="travel.ideas_photo_caption">Killymoon Castle</p>
+            </div>
+            <div class="travel-intro-copy travel-ideas-copy">
+              <div class="travel-ideas-list">
+                <article class="travel-idea">
+                  <h3 data-i18n="travel.idea_dublin_title">Dublin</h3>
+                  <p data-i18n="travel.idea_dublin_copy">Explore the city centre, historic streets, parks, pubs and restaurants, or head to the coast for Howth or Malahide.</p>
+                </article>
+                <article class="travel-idea">
+                  <h3 data-i18n="travel.idea_belfast_title">Belfast</h3>
+                  <p data-i18n="travel.idea_belfast_copy">Easy to explore from a central base, with the Titanic Quarter, Cathedral Quarter, City Hall and plenty of cafés, restaurants and pubs.</p>
+                </article>
+                <article class="travel-idea">
+                  <h3 data-i18n="travel.idea_west_title">West Coast of Ireland</h3>
+                  <p data-i18n="travel.idea_west_copy">Galway, Doolin and the Cliffs of Moher are beautiful options if you have a little more time.</p>
+                  <p class="travel-idea-note" data-i18n="travel.idea_west_note">Car recommended, or accessible via organised tours from Dublin.</p>
+                </article>
+                <article class="travel-idea">
+                  <h3 data-i18n="travel.idea_north_title">North Coast</h3>
+                  <p data-i18n="travel.idea_north_copy">Explore the Giant’s Causeway, Dunluce Castle, Portrush and several Game of Thrones filming locations.</p>
+                  <p class="travel-idea-note" data-i18n="travel.idea_north_note">Car recommended, or accessible via organised tours from Belfast.</p>
+                </article>
+                <article class="travel-idea travel-idea--local">
+                  <h3 data-i18n="travel.idea_local_title">Around Cookstown &amp; Mid Ulster</h3>
+                  <p data-i18n="travel.idea_local_copy">Stay local with a walk at Ballyronan, a pre-booked visit to Killymoon Castle, or a relaxed afternoon at Drum Manor or Pomeroy Forest.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <template>
           <article class="itinerary-featured">
             <div class="itinerary-featured-copy">
               <span class="itinerary-eyebrow" data-i18n="travel.wedding_weekend_label">The Wedding Weekend</span>
@@ -516,6 +711,7 @@
 
           <p class="itinerary-disclaimer" data-i18n="travel.itinerary_disclaimer">Routes and timings are intended as inspiration only. Transport schedules, attraction opening times and travel conditions may change, so please check the latest information when planning your journey.</p>
           <p class="itinerary-note" data-i18n="travel.itinerary_note">However long you stay, we're simply happy you're coming. ♡</p>
+          </template>
         </section>
         <button class="travel-guide-back" type="button" data-i18n="travel.back_to_overview">Back to Travel Information ↑</button>
       </div>
@@ -537,176 +733,135 @@
 
       <div class="faq-grid">
         <div class="faq-column">
-          <h3 class="faq-category" data-i18n="faq.category_day">The Wedding Day</h3>
           <div class="faq-panel">
-        <article class="faq-item">
-          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
-            <span data-i18n="faq.q1">What time should I arrive?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </button>
-          <div id="faq-answer-1" class="faq-answer" hidden>
-            <p data-i18n="faq.a1">Please arrive by 14:30 for seating and welcome drinks.</p>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
-            <span data-i18n="faq.q2">Where are the ceremony and reception?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </button>
-          <div id="faq-answer-2" class="faq-answer" hidden>
-            <p data-i18n="faq.a2">The ceremony will take place at the Church of Our Lady of the Assumption in Magherafelt. Afterwards, the celebrations will continue at Glenavon House Hotel in Cookstown, Northern Ireland.</p>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
-            <span data-i18n="faq.q3">What is the dress code?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </button>
-          <div id="faq-answer-3" class="faq-answer" hidden>
-            <p data-i18n="faq.a3">Cocktail attire in soft neutrals is perfect.</p>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
-            <span data-i18n="faq.q4">How will the day look?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </button>
-          <div id="faq-answer-4" class="faq-answer" hidden>
-            <p data-i18n="faq.a4">The ceremony begins at 1pm. After we are married, we will have group photos outside the church, so please do not rush away. The wedding reception starts at 3pm at Glenavon House Hotel, with drinks and finger food, including a few Hungarian treats. We will join the reception once we have finished our photo session, and there will be entertainment during the reception, so it is not to be missed. Dinner will begin from 5pm, with speeches at 5.15pm, and we will finish dinner with the wedding cake. Then it is time for the first dance and the party. We will have a live band playing a mix of Irish, Hungarian and international songs, followed by a DJ. Late-night food will be served from 10pm, and the DJ will finish at around 1am due to venue restrictions. Late-night drinks will be available at the hotel bar.</p>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-15">
-            <span data-i18n="faq.q15">Will the wedding be indoors or outdoors?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </button>
-          <div id="faq-answer-15" class="faq-answer" hidden>
-            <p data-i18n="faq.a15">The wedding will be indoors, with very close access to the outdoor terrace at Glenavon House Hotel.</p>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
-            <span data-i18n="faq.q5">Is parking available?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </button>
-          <div id="faq-answer-5" class="faq-answer" hidden>
-            <p data-i18n="faq.a5">Complimentary on-site parking is available, with plenty of spaces for our guests.</p>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
-            <span data-i18n="faq.q6">Are children invited?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </button>
-          <div id="faq-answer-6" class="faq-answer" hidden>
-            <p data-i18n="faq.a6">Please follow the names listed on your invitation when replying.</p>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-7">
-            <span data-i18n="faq.q7">Can I bring a plus one?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </button>
-          <div id="faq-answer-7" class="faq-answer" hidden>
-            <p data-i18n="faq.a7">If your invitation includes a plus one, please include their name in your RSVP.</p>
-          </div>
-        </article>
-
+            <article class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+                <span data-i18n="faq.q1">What time should I arrive?</span>
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-answer-1" class="faq-answer" hidden>
+                <p data-i18n="faq.a1">Please arrive at the church from 12:30 so everyone can be seated before the ceremony begins at 13:00.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+                <span data-i18n="faq.q3">What is the dress code?</span>
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-answer-3" class="faq-answer" hidden>
+                <p data-i18n="faq.a3">Cocktail attire in soft neutrals is perfect.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+                <span data-i18n="faq.q4">How will the day look?</span>
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-answer-4" class="faq-answer" hidden>
+                <p data-i18n="faq.a4">The ceremony begins at 1pm. After we are married, we will have group photos outside the church, so please do not rush away. The wedding reception starts at 3pm at Glenavon House Hotel, with drinks and finger food, including a few Hungarian treats. We will join the reception once we have finished our photo session, and there will be entertainment during the reception, so it is not to be missed. Dinner will begin from 5pm, with speeches at 5.15pm, and we will finish dinner with the wedding cake. Then it is time for the first dance and the party. We will have a live band playing a mix of Irish, Hungarian and international songs, followed by a DJ. Late-night food will be served from 10pm, and the DJ will finish at around 1am due to venue restrictions. Late-night drinks will be available at the hotel bar.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-15">
+                <span data-i18n="faq.q15">Will the wedding be indoors or outdoors?</span>
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-answer-15" class="faq-answer" hidden>
+                <p data-i18n="faq.a15">The wedding will be indoors, with very close access to the outdoor terrace at Glenavon House Hotel.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-21">
+                <span data-i18n="faq.q21">How do I get to the church if I don't have a car?</span>
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-answer-21" class="faq-answer" hidden>
+                <p data-i18n="faq.a21_1">Don't worry if you won't have a car. A number of our guests will be driving to the church, so once we know final guest numbers we may be able to coordinate lifts.</p>
+                <p data-i18n="faq.a21_2">Alternatively, we will provide details for local taxi companies. Depending on how many guests require transport, we may also look into arranging a private transfer or coach.</p>
+                <p data-i18n="faq.a21_3">Please note that organised transport is not guaranteed at this stage. We'll confirm the available options closer to the wedding once we know how many guests need transport.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+                <span data-i18n="faq.q5">Is parking available at the hotel?</span>
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-answer-5" class="faq-answer" hidden>
+                <p data-i18n="faq.a5">Yes. Complimentary on-site parking is available for wedding guests, and cars can also be left at the hotel overnight and collected the following morning.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
+                <span data-i18n="faq.q6">Are children invited?</span>
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-answer-6" class="faq-answer" hidden>
+                <p data-i18n="faq.a6">Please follow the names listed on your invitation when replying.</p>
+              </div>
+            </article>
           </div>
         </div>
 
         <div class="faq-column">
-          <h3 class="faq-category" data-i18n="faq.category_info">Good to Know</h3>
           <div class="faq-panel">
-        <article class="faq-item">
-          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-8">
-            <span data-i18n="faq.q8">Can dietary requirements be accommodated?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </button>
-          <div id="faq-answer-8" class="faq-answer" hidden>
-            <p data-i18n="faq.a8">Please include any dietary requirements or allergies in your RSVP message.</p>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-16">
-            <span data-i18n="faq.q16">When is the RSVP deadline?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </button>
-          <div id="faq-answer-16" class="faq-answer" hidden>
-            <p data-i18n="faq.a16">Please RSVP by 1 August.</p>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-9">
-            <span data-i18n="faq.q9">How do I book the special hotel rate?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </button>
-          <div id="faq-answer-9" class="faq-answer" hidden>
-            <p data-i18n="venue.stay_copy1">A limited number of rooms have been reserved for our wedding guests at a special discounted rate.</p>
-            <p><strong data-i18n="venue.stay_note">This rate is not available online.</strong></p>
-            <p><span data-i18n="venue.stay_copy2a">Please book directly with the hotel by phone or email and quote</span> <strong>&ldquo;Laura &amp; Peter, 9 October 2027&rdquo;</strong> <span data-i18n="venue.stay_copy2b">to receive the wedding rate.</span></p>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-10">
-            <span data-i18n="faq.q10">Can I leave my car overnight?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </button>
-          <div id="faq-answer-10" class="faq-answer" hidden>
-            <p data-i18n="faq.a10">Guests can leave their cars at the hotel overnight and collect them the following morning.</p>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-11">
-            <span data-i18n="faq.q11">How do I RSVP?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </button>
-          <div id="faq-answer-11" class="faq-answer" hidden>
-            <p data-i18n="faq.a11">Use the RSVP form below and send via Gmail.</p>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-12">
-            <span data-i18n="faq.q12">Who should I contact if I have a question?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </button>
-          <div id="faq-answer-12" class="faq-answer" hidden>
-            <p data-i18n="faq.a12">Please use the contact details below and we will be happy to help.</p>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-13">
-            <span data-i18n="faq.q13">What are some Irish wedding traditions?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </button>
-          <div id="faq-answer-13" class="faq-answer" hidden>
-            <p data-i18n="faq.a13">Irish wedding traditions can include handfasting, Claddagh rings, traditional music and lively celebrations. Every couple chooses the traditions that feel most meaningful to them.</p>
-          </div>
-        </article>
-
-        <article class="faq-item">
-          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-14">
-            <span data-i18n="faq.q14">What should we expect at a Hungarian wedding?</span>
-            <span class="faq-toggle" aria-hidden="true">+</span>
-          </button>
-          <div id="faq-answer-14" class="faq-answer" hidden>
-            <p data-i18n="faq.a14">Hungarian weddings often include lively music, dancing, heartfelt speeches and plenty of food and drink. Some celebrations may also feature traditional games or customs, but every couple creates a day that feels personal to them.</p>
-          </div>
-        </article>
-
+            <article class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-7">
+                <span data-i18n="faq.q7">Can I bring a plus one?</span>
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-answer-7" class="faq-answer" hidden>
+                <p data-i18n="faq.a7">If your invitation includes a plus one, please include their name in your RSVP.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-8">
+                <span data-i18n="faq.q8">Can dietary requirements be accommodated?</span>
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-answer-8" class="faq-answer" hidden>
+                <p data-i18n="faq.a8">Please include any dietary requirements or allergies in your RSVP message.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-9">
+                <span data-i18n="faq.q9">How do I book the special hotel rate?</span>
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-answer-9" class="faq-answer" hidden>
+                <p data-i18n="venue.stay_copy1">A limited number of rooms have been reserved for our wedding guests at a special discounted rate.</p>
+                <p><strong data-i18n="venue.stay_note">This rate is not available online.</strong></p>
+                <p><span data-i18n="venue.stay_copy2a">Please book directly with the hotel by phone or email and quote</span> <strong>&ldquo;Laura &amp; Peter, 9 October 2027&rdquo;</strong> <span data-i18n="venue.stay_copy2b">to receive the wedding rate.</span></p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-13">
+                <span data-i18n="faq.q13">What are some Irish wedding traditions?</span>
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-answer-13" class="faq-answer" hidden>
+                <p data-i18n="faq.a13">Irish wedding traditions can include handfasting, Claddagh rings, traditional music and lively celebrations. Every couple chooses the traditions that feel most meaningful to them.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-14">
+                <span data-i18n="faq.q14">What should we expect at a Hungarian wedding?</span>
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-answer-14" class="faq-answer" hidden>
+                <p data-i18n="faq.a14">Hungarian weddings often include lively music, dancing, heartfelt speeches and plenty of food and drink. Some celebrations may also feature traditional games or customs, but every couple creates a day that feels personal to them.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-22">
+                <span data-i18n="faq.q22">Do you have a second day celebration?</span>
+                <span class="faq-toggle" aria-hidden="true">+</span>
+              </button>
+              <div id="faq-answer-22" class="faq-answer" hidden>
+                <p data-i18n="faq.a22_1">We won’t have an official second-day celebration, but we’ll be staying at the Glenavon on both Saturday and Sunday night and would love to spend some more relaxed time with anyone staying over.</p>
+                <p data-i18n="faq.a22_2">Sunday will be completely casual — everyone can arrange their own food, enjoy the hotel’s leisure facilities, and simply spend time together if they wish.</p>
+                <p data-i18n="faq.a22_3">We’ll be checking out on Monday morning.</p>
+              </div>
+            </article>
           </div>
         </div>
       </div>
@@ -843,6 +998,6 @@
     </div>
   </footer>
 
-  <script type="module" src="app.js?v=20260818-1"></script>
+  <script type="module" src="app.js?v=20261104-1"></script>
 </body>
 </html>
