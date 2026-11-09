@@ -68,6 +68,10 @@ python -m http.server 8080
 Then open:
 - http://localhost:8080/
 
+## Check external website links
+
+With an internet connection, run `npm run test:links` to check external links and embedded map URLs in [index.html](index.html).
+
 ## How RSVP works
 
 - Guest fills the form.

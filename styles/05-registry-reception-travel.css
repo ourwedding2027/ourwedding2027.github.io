@@ -645,7 +645,7 @@
     max-width: 355px;
     opacity: 0.78;
     pointer-events: none;
-    transform: translateX(0);
+  transform: translateX(-100px);
 }
 
 @media (max-width: 768px) {

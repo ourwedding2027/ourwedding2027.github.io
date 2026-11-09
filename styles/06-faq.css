@@ -33,7 +33,7 @@
 .faq-botanical-top-right-flower {
   z-index: 1;
   top: clamp(-143px, -9vw, -93px);
-  left: clamp(-260px, -16vw, -190px);
+  right: calc(100% - clamp(-260px, -16vw, -190px) - clamp(900px, 82vw, 1500px));
   width: clamp(900px, 82vw, 1500px);
   transform: rotate(0deg);
   opacity: 0.9;

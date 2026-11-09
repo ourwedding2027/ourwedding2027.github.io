@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "start": "python -m http.server 8080",
-    "dev": "python -m http.server 8080"
+    "dev": "python -m http.server 8080",
+    "test:links": "python -m unittest discover -s tests"
   },
   "keywords": ["wedding", "static-site"],
   "author": "Laura & Peter",

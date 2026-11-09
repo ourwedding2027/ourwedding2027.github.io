@@ -288,10 +288,11 @@ main h2 {
   }
 
   #countdown .countdown-botanical {
-    width: clamp(270px, 93vw, 390px);
+    width: auto;
+    height: clamp(180px, 62vw, 260px);
     left: clamp(-307px, 47vw, 225px);
-    top: auto;
-    bottom: clamp(-104px, -20vw, -62px);
+    top: calc(100% - clamp(180px, 62vw, 260px) + clamp(62px, 20vw, 104px));
+    bottom: auto;
   }
 
   .menu-section {
@@ -365,7 +366,7 @@ main h2 {
     flex-direction: column;
     gap: 0.4rem;
     min-height: 0;
-    padding: 0.5rem 3.75rem 1.5rem;
+    padding: 0.5rem 1.25rem 1.5rem;
   }
 
   .travel-intro.travel-ideas-intro {
@@ -373,7 +374,7 @@ main h2 {
   }
 
   .travel-intro-header {
-    padding: 1.5rem 3.75rem 0;
+    padding: 1.5rem 1.25rem 0;
   }
 
   .travel-intro-copy {
@@ -397,21 +398,16 @@ main h2 {
     height: auto;
   }
 
-  .travel-map-caption {
-    margin-top: -0.1rem;
-    font-size: 0.95rem;
-  }
-
   .travel-guide-section,
   .travel-itineraries {
     padding-top: 3rem;
     padding-bottom: 3rem;
-    padding-right: 3.75rem;
-    padding-left: 3.75rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
   }
 
   .travel-itineraries {
-    padding: 0.5rem 3.75rem 2rem;
+    padding: 0.5rem 1.25rem 2rem;
   }
 
   .travel-guide:not([hidden]),
@@ -550,6 +546,14 @@ main h2 {
     border-left: 1px solid rgba(180, 138, 78, 0.55);
   }
 
+  .venue-hero-eyebrow {
+    text-align: center;
+  }
+
+  .venue-hero-divider {
+    justify-content: center;
+  }
+
   .timeline-section {
     padding: 2rem 0.85rem;
     clip-path: polygon(0 12px, 12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px));
@@ -672,13 +676,13 @@ main h2 {
   }
 
   .faq-question {
-    font-size: 1.15rem;
+    font-size: var(--body-copy-size);
     letter-spacing: 0.01em;
   }
 
   .faq-answer,
   .faq-answer p {
-    font-size: clamp(0.82rem, 3.25vw, 0.92rem);
+    font-size: var(--body-copy-size);
   }
 
   .wedding-details { padding: 2.5rem 1rem; }
@@ -752,9 +756,12 @@ main h2 {
   }
 
   .travel-section p:not(.travel-kicker):not(.travel-script),
-  .travel-section li,
-  .travel-section small,
   .travel-stay-band p:not(.travel-stay-alternative-lead) {
+    font-size: var(--body-copy-size);
+  }
+
+  .travel-section li,
+  .travel-section small {
     font-size: clamp(0.82rem, 3.25vw, 0.92rem);
   }
 }
@@ -837,8 +844,18 @@ main h2 {
   }
 
   .celebration-journey {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    gap: clamp(0.35rem, 2vw, 0.9rem);
     margin-top: 2.5rem;
+  }
+
+  .celebration-journey-line {
+    flex: 1 1 0;
+    min-width: clamp(24px, 8vw, 44px);
+  }
+
+  .celebration-journey p {
+    min-width: 0;
   }
 
   .celebration-botanical-top-right {
