@@ -480,10 +480,22 @@
 }
 
 .countdown-botanical {
-  left: clamp(60%, 61vw, 1100px);
-  top: clamp(-175px, -9.65vw, -105px);
-  width: clamp(820px, 70vw, 1450px);
+  position: absolute;
+  z-index: 2;
+  height: auto;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+
+  bottom: clamp(-204px, -12vw, -48px);
+  right: clamp(-346px, -18vw, -30px);
+  width: clamp(229px, 57vw, 964px);
+
   transform: rotate(0deg);
+  opacity: 0.85;
 }
 
 .menu-section {
@@ -578,22 +590,33 @@
   text-align: center;
 }
 
-.menu-botanical-bottom-left {
+.menu-botanical-bottom-left,
+.menu-botanical-top-right {
+  position: absolute;
   z-index: 0;
-  top: clamp(-96px, -8vw, 137px);
-  left: clamp(-180px, 16vw, -172px);
-  width: clamp(96px, 153vw, 925px);
-  transform: rotate(-2deg);
+  height: auto;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+}
+
+.menu-botanical-bottom-left {
+  left: -104px;
+  bottom: 85px;
+  width: clamp(272px, 53vw, 565px);
+  transform: rotate(0deg);
   opacity: 0.8;
 }
 
 .menu-botanical-top-right {
-  z-index: 0;
-  top: clamp(282px, -65vw, -96px);
-  right: clamp(-163px, -38.2vw, -90px);
-  width: clamp(121px, 94vw, 818px);
-  transform: rotate(360deg);
-  opacity: 0.8;
+    right: -106px;
+    top: 472px;
+    width: clamp(260px, 30vw, 549px);
+    transform: rotate(0deg);
+    opacity: 0.8;
 }
 
 .menu-course h3 {
