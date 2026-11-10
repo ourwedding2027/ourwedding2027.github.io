@@ -288,10 +288,10 @@ main h2 {
   }
 
   #countdown .countdown-botanical {
-    width: auto;
-    height: clamp(180px, 62vw, 260px);
+    width: clamp(300px, 105vw, 420px);
+    height: clamp(200px, 70vw, 280px);
     left: clamp(-307px, 47vw, 225px);
-    top: calc(100% - clamp(180px, 62vw, 260px) + clamp(62px, 20vw, 104px));
+    top: calc(100% - clamp(200px, 70vw, 280px) + clamp(62px, 20vw, 104px));
     bottom: auto;
   }
 
@@ -333,15 +333,19 @@ main h2 {
   }
 
   .menu-botanical-bottom-left {
-    bottom: clamp(-150px, -33vw, -96px);
-    left: clamp(-156px, 59vw, 180px);
-    width: clamp(280px, 173vw, 495px);
+    z-index: 0;
+    top: clamp(-172px, -26vw, 132px);
+    left: clamp(-180px, 29vw, -112px);
+    width: clamp(96px, 130vw, 925px);
+    transform: rotate(-2deg);
+    opacity: 0.8;
   }
 
   .menu-botanical-top-right {
-    top: clamp(-87px, -24vw, -21px);
-    right: clamp(-59px, 69vw, 178px);
-    width: clamp(170px, 131vw, 454px);
+    z-index: 0;
+    top: clamp(706px, -70vw, -52px);
+    right: clamp(-163px, -43.2vw, -90px);
+    width: clamp(121px, 119vw, 818px);
   }
 
   .reception-grid,
@@ -670,9 +674,9 @@ main h2 {
   }
 
   .faq-botanical-top-right-flower {
-    top: -57px;
-    right: -22px;
-    width: clamp(309px, 128vw, 532px);
+    top: -63px;
+    right: -57px;
+    width: clamp(309px, 147vw, 585px);
   }
 
   .faq-question {

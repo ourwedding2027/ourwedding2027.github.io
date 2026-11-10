@@ -123,16 +123,24 @@ main {
 }
 
 .hero-floral-left,
-.hero-floral-right {
+.hero-floral-right,
+.faq-botanical,
+.countdown-botanical,
+.menu-botanical {
   position: absolute;
-  width: clamp(900px, 82vw, 1500px);
+  z-index: 2;
   height: auto;
+  max-width: none;
   pointer-events: none;
   user-select: none;
-  z-index: 2;
   border: 0;
   outline: 0;
   box-shadow: none;
+}
+
+.hero-floral-left,
+.hero-floral-right {
+  width: clamp(900px, 82vw, 1500px);
 }
 
 /* Floral art is 2:3 and its flowers end at ~62% of its height; -0.25 × width pins that edge to the hero's bottom border. */
