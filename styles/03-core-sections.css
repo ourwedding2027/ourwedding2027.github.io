@@ -20,7 +20,7 @@
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
-  margin-top: 0 !important;
+  margin-top: 0;
   margin-bottom: 1rem;
 
   border: 0;
@@ -850,7 +850,7 @@
 
 .venue-hero-directions:hover {
   background: #b48a4e;
-  color: #541c21;
+  color: #3d1418;
 }
 
 .venue-facts,

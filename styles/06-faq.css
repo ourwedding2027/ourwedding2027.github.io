@@ -12,9 +12,9 @@
 
 .faq-botanical-top-left {
   z-index: 1;
-  top: -130px;
-  left: -215px;
-  width: clamp(177px, 79vw, 1369px);
+  top: clamp(-127px, -8.8vw, -51px);
+  left: clamp(-217px, calc(154px - 35vw), -50px);
+  width: clamp(220px, 88vw, 1380px);
   opacity: 0.9;
 }
 

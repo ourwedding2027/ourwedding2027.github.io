@@ -639,24 +639,29 @@
 }
 
 .travel-stay-suitcase {
-    position: relative;
-    align-self: center;
-    width: clamp(120px, 26vw, 355px);
-    max-width: 355px;
-    opacity: 0.78;
-    pointer-events: none;
+  position: relative;
+  align-self: center;
+  width: clamp(120px, 26vw, 355px);
+  max-width: 355px;
+  opacity: 0.78;
+  pointer-events: none;
   transform: translateX(-100px);
 }
 
 @media (max-width: 768px) {
-    img.travel-stay-suitcase {
-        float: right;
-        width: 220px !important;
-        max-width: none !important;
-        margin: 0 0 2px -60px;
-        transform: translateX(30px);
-    }
+  .travel-stay-suitcase {
+    float: right;
+    width: 220px;
+    max-width: none;
+    margin: 0 0 2px -60px;
+    transform: none;
+  }
+}
 
+@media (min-width: 769px) and (max-width: 1100px) {
+  .travel-stay-suitcase {
+    transform: none;
+  }
 }
 
 .travel-stay-band > h2 {
@@ -761,7 +766,7 @@
 }
 
 .itinerary-divider {
-  margin: 1rem auto 0.4rem;
+  margin: 1rem auto 1.5rem;
 }
 
 .travel-itineraries > .travel-script {
@@ -772,14 +777,15 @@
 }
 
 .travel-trip-copy {
-  max-width: 960px;
-  margin: 0 auto clamp(0.35rem, 0.7vw, 0.55rem);
+  max-width: none;
+  margin: 0 0 clamp(0.35rem, 0.7vw, 0.55rem);
   color: #3d342f;
   font-family: "Libre Baskerville", serif;
   font-size: var(--body-copy-size);
   font-weight: 400;
   line-height: 1.75;
   letter-spacing: 0;
+  text-align: left;
 }
 
 .travel-intro.travel-ideas-intro {

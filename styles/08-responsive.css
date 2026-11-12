@@ -497,8 +497,8 @@ main h2 {
   }
 
   .travel-stay-suitcase {
-    width: 100px;
-    max-width: 115px;
+    width: 220px;
+    max-width: none;
   }
 
   .travel-stay-content {
@@ -639,7 +639,7 @@ main h2 {
   .rsvp-floral-bottom-left-leaf {
     bottom: -28px;
     left: -65px;
-    width: clamp(190px, 104vw, 386px);
+    width: clamp(191px, 145vw, 589px);
   }
 
   .rsvp-header h2 {
@@ -666,9 +666,10 @@ main h2 {
   }
 
   .faq-botanical-top-left {
-    top: -51px;
-    left: -87px;
-    width: clamp(529px, 40vw, 330px);
+    z-index: 1;
+    top: clamp(-127px, -8.8vw, -51px);
+    left: clamp(-208px, calc(152px - 35vw), -97px);
+    width: clamp(220px, 130vw, 1378px);
   }
 
   .faq-question {
@@ -759,6 +760,14 @@ main h2 {
   .travel-section li,
   .travel-section small {
     font-size: clamp(0.82rem, 3.25vw, 0.92rem);
+  }
+}
+
+@media (min-width: 561px) and (max-width: 768px) {
+  .faq-botanical-top-left {
+    top: clamp(-127px, -12vw, -70px);
+    left: clamp(-217px, calc(144px - 35vw), -50px);
+    width: clamp(220px, 88vw, 1380px);
   }
 }
 
