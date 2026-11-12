@@ -404,7 +404,7 @@
     "common.footer_links": "Lábléc gyorslinkek",
     "hero.and": "és",
     "hero.copy": "ÖRÖMMEL MEGHÍVUNK BENNETEKET, HOGY VELÜNK ÜNNEPELJÉTEK HÁZASSÁGKÖTÉSÜNKET",
-    "hero.date": "szombat · október 9. · 2027",
+    "hero.date": "szombat · október 9 · 2027",
     "hero.language_prompt": "Válassz nyelvet",
     "image.church_alt": "Church of Our Lady of the Assumption, Magherafelt",
     "image.church_map_title": "A Church of Our Lady of the Assumption templom térképes helye, Magherafelt",
