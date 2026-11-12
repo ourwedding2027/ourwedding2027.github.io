@@ -289,9 +289,10 @@ main h2 {
 
   #countdown .countdown-botanical {
         
-    right: -193px;
-    bottom: -103px;
-    width: clamp(220px, 112vw, 490px);
+    right: -145px;
+    bottom: -95px;
+    width: 440px;
+    max-width: none;
 
     left: auto;
     top: auto;
