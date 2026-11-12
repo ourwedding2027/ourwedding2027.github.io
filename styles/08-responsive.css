@@ -288,9 +288,9 @@ main h2 {
   }
 
   #countdown .countdown-botanical {
-    right: -194px;
-    bottom: -103px;
-    width: clamp(190px, 108vw, 480px);
+    right: -154px;
+    bottom: -82px;
+    width: clamp(190px, 93vw, 386px);
 
     left: auto;
     top: auto;
@@ -639,7 +639,7 @@ main h2 {
   .rsvp-floral-bottom-left-leaf {
     bottom: -28px;
     left: -65px;
-    width: clamp(191px, 145vw, 589px);
+    width: clamp(190px, 104vw, 386px);
   }
 
   .rsvp-header h2 {
@@ -665,11 +665,15 @@ main h2 {
     padding: 2rem 1rem;
   }
 
-  .faq-botanical-top-left {
+  #faq .faq-botanical-top-left {
+    top: -63px;
+    left: -98px;
+    right: auto;
+    bottom: auto;
+    width: clamp(309px, 147vw, 585px);
+    height: auto;
     z-index: 1;
-    top: clamp(-127px, -8.8vw, -51px);
-    left: clamp(-208px, calc(152px - 35vw), -97px);
-    width: clamp(220px, 130vw, 1378px);
+    opacity: 0.9;
   }
 
   .faq-question {
@@ -760,14 +764,6 @@ main h2 {
   .travel-section li,
   .travel-section small {
     font-size: clamp(0.82rem, 3.25vw, 0.92rem);
-  }
-}
-
-@media (min-width: 561px) and (max-width: 768px) {
-  .faq-botanical-top-left {
-    top: clamp(-127px, -12vw, -70px);
-    left: clamp(-217px, calc(144px - 35vw), -50px);
-    width: clamp(220px, 88vw, 1380px);
   }
 }
 
